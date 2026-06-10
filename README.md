@@ -19,6 +19,8 @@ revealed - no account, no app install, no cloud service required.
 The security model is simple: **the printed paper alone is useless** without the password. Paper and
 password together grant full access.
 
+To get started, visit **[janlucaklees.github.io/digital-bequest](https://janlucaklees.github.io/digital-bequest/)**.
+
 ## How it Works
 
 ### 1. Encrypt your credentials
@@ -50,6 +52,7 @@ deploy your own copy. GitHub Pages makes this free and straightforward:
 1. Fork the repository on GitHub.
 2. In your fork's settings, enable GitHub Pages from the `master` branch `/docs` folder.
 3. Your app is now live at `https://<your-username>.github.io/<your-repo>/`.
+4. Update the link at the top of this README to point to your own deployment.
 
 Point your printed QR codes at your own deployment and you're no longer dependent on anyone.
 
