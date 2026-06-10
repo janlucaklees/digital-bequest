@@ -1,14 +1,13 @@
 <script lang="ts">
-	// Props
-	export let data;
-
-	// Imports
 	import QRCode from 'qrcode';
 
-	// Code
-	let canvas;
+	let { data }: { data: string } = $props();
 
-	$: if (canvas) void QRCode.toCanvas(canvas, data, { errorCorrectionLevel: 'H' });
+	let canvas = $state<HTMLCanvasElement | undefined>(undefined);
+
+	$effect(() => {
+		if (canvas) void QRCode.toCanvas(canvas, data, { errorCorrectionLevel: 'H' });
+	});
 </script>
 
 <canvas bind:this={canvas}></canvas>

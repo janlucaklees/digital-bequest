@@ -1,29 +1,27 @@
 <script lang="ts">
-	//
-	// Props
-
-	//
-	// Imports
 	import html2pdf from 'html2pdf.js';
-
 	import i18n from './i18n';
-
 	import Page from './components/Page.svelte';
 	import { encodeMessage } from './lib/message-functions';
 
-	//
-	// Code
-	let message = 'In the event of my death, scan the QR Code to retrieve my important credentials.';
-	let credentials = '';
-	let password = '';
-	let passwordRepetition = '';
+	let message = $state(
+		'In the event of my death, scan the QR Code to retrieve my important credentials.'
+	);
+	let credentials = $state('');
+	let password = $state('');
+	let passwordRepetition = $state('');
 
-	let page;
+	let page = $state<HTMLElement | undefined>(undefined);
+	let cipher = $state('');
 
-	$: cipher = encodeMessage(credentials, password);
+	$effect(() => {
+		void (async () => {
+			cipher = await encodeMessage(credentials, password);
+		})();
+	});
 
 	function downloadPDF(): void {
-		void html2pdf(page);
+		if (page) void html2pdf(page);
 	}
 </script>
 
@@ -78,7 +76,7 @@
 	</div>
 
 	<div class="align-center hide-on-print">
-		<button class="cta" on:click={downloadPDF}>
+		<button class="cta" onclick={downloadPDF}>
 			{$i18n.t('encode.steps.4.buttons.download')}
 		</button>
 	</div>

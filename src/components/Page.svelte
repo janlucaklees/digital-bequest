@@ -1,20 +1,13 @@
 <script lang="ts">
-	//
-	// Props
-	export let message;
-	export let qrCodeData;
-
-	export let page;
-
-	//
-	// Imports
 	import i18n from '../i18n';
-
 	import QrCode from './QrCode.svelte';
 	import logo from '../assets/digital-bequest.svg';
 
-	//
-	// Code
+	let {
+		message,
+		qrCodeData,
+		page = $bindable()
+	}: { message: string; qrCodeData: string; page?: HTMLElement } = $props();
 </script>
 
 <div class="page" bind:this={page}>

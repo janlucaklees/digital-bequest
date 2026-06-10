@@ -1,22 +1,10 @@
 <script lang="ts">
-	//
-	// Props
-
-	//
-	// Imports
 	import i18n from './i18n';
-
 	import logo from './assets/digital-bequest.svg';
 	import Decode from './Decode.svelte';
 	import Encode from './Encode.svelte';
 
-	//
-	// Code
-
-	// Retrieve possible cipher from URL
-	const queryParams = new URLSearchParams(window.location.search);
-	const cipher = queryParams.get('c');
-	const hasCipher = cipher !== null;
+	const cipher = new URLSearchParams(window.location.search).get('c');
 </script>
 
 <main class="wrapper">
@@ -32,7 +20,7 @@
 		</p>
 	</div>
 
-	{#if hasCipher}
+	{#if cipher !== null}
 		<Decode {cipher} />
 	{:else}
 		<Encode />

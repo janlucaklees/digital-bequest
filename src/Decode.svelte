@@ -1,20 +1,17 @@
 <script lang="ts">
-	//
-	// Props
-	export let cipher;
-
-	//
-	// Imports
 	import i18n from './i18n';
-
 	import { decodeMessage } from './lib/message-functions';
 
-	//
-	// Code
-	let password = '';
-	let credentials = '';
+	let { cipher }: { cipher: string } = $props();
 
-	$: credentials = decodeMessage(cipher, password);
+	let password = $state('');
+	let credentials = $state('');
+
+	$effect(() => {
+		void (async () => {
+			credentials = await decodeMessage(cipher, password);
+		})();
+	});
 </script>
 
 <div class="container">
