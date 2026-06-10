@@ -1,0 +1,10 @@
+{
+	"name": "Digital Bequest",
+	"short_name": "Digital Bequest",
+	"description": "Don't leave your loved ones hanging.",
+	"start_url": "/digital-bequest/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#274472",
+	"icons": []
+}
