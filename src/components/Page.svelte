@@ -8,10 +8,10 @@
 
 	//
 	// Imports
-	import i18n from "../i18n";
+	import i18n from '../i18n';
 
-	import QrCode from "./QrCode.svelte";
-	import logo from "../assets/digital-bequest.svg";
+	import QrCode from './QrCode.svelte';
+	import logo from '../assets/digital-bequest.svg';
 
 	//
 	// Code
@@ -27,21 +27,21 @@
 
 		<p>
 			<small>
-				{$i18n.t("page.qr-code.hint")}
+				{$i18n.t('page.qr-code.hint')}
 			</small>
 		</p>
 	</div>
 
 	<div class="footer">
-		<img class="logo" src={logo} alt={$i18n.t("app.logo.alt")} />
+		<img class="logo" src={logo} alt={$i18n.t('app.logo.alt')} />
 
 		<h1 class="app-name">
-			{$i18n.t("app.name")}
+			{$i18n.t('app.name')}
 		</h1>
 
 		<p class="credits">
 			<small>
-				{$i18n.t("page.footer.message", { url: window.location.href })}
+				{$i18n.t('page.footer.message', { url: window.location.href })}
 			</small>
 		</p>
 	</div>
@@ -80,8 +80,8 @@
 	.footer {
 		display: grid;
 		grid-template:
-			"logo  title" 8mm
-			"blank credits" auto
+			'logo  title' 8mm
+			'blank credits' auto
 			/ 8mm auto;
 		align-items: flex-end;
 		align-content: flex-end;

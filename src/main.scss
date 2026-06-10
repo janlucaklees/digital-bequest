@@ -4,7 +4,6 @@
 
 @import 'milligram/src/milligram.sass';
 
-
 :root {
 	--primary-color: #274472;
 	--font-color: #000000;
@@ -32,7 +31,7 @@ html {
 	max-width: 80rem;
 }
 
-.wrapper>.container {
+.wrapper > .container {
 	padding-bottom: 4.5rem;
 	padding-top: 4.5rem;
 }
@@ -43,7 +42,6 @@ img {
 }
 
 @media print {
-
 	.hide-on-print {
 		display: none !important;
 	}
@@ -57,5 +55,4 @@ img {
 
 		transform: unset !important;
 	}
-
 }

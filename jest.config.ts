@@ -1,10 +1,6 @@
 export default {
-	moduleFileExtensions: [
-		'js',
-		'ts',
-		'json',
-	],
+	moduleFileExtensions: ['js', 'ts', 'json'],
 	transform: {
-		'^.+\\.ts$': 'ts-jest',
+		'^.+\\.ts$': 'ts-jest'
 	}
-}
+};

@@ -1,6 +1,5 @@
 import CryptoJS from 'crypto-js';
 
-
 export function encodeMessage(message: string, password: string): string {
 	return CryptoJS.AES.encrypt(message, password).toString();
 }

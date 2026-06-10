@@ -1,24 +1,24 @@
-import i18next from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import HttpBackend from "i18next-http-backend";
-import { createI18nStore, isLoading } from "svelte-i18next";
+import i18next from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpBackend from 'i18next-http-backend';
+import { createI18nStore } from 'svelte-i18next';
 
-i18next
+void i18next
 	.use(HttpBackend)
 	.use(LanguageDetector)
 	.init({
 		detection: {
-			order: ["querystring", "localStorage", "navigator"],
-			caches: ["localStorage"],
-			lookupQuerystring: "locale",
-			lookupLocalStorage: "locale",
+			order: ['querystring', 'localStorage', 'navigator'],
+			caches: ['localStorage'],
+			lookupQuerystring: 'locale',
+			lookupLocalStorage: 'locale'
 		},
-		fallbackLng: "en-US",
+		fallbackLng: 'en-US',
 		backend: {
-			loadPath: "/digital-bequest/lang/{{lng}}.json",
+			loadPath: '/digital-bequest/lang/{{lng}}.json'
 		},
 		interpolation: {
-			escapeValue: false, // not needed for svelte as it escapes by default
+			escapeValue: false // not needed for svelte as it escapes by default
 		}
 	});
 

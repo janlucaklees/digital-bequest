@@ -1,24 +1,24 @@
 {
-  "app.name": "Digital Bequest",
-  "app.slogan": "Don't leave your loved ones hanging.",
-  "app.logo.alt": "Digital Bequest Logo",
+	"app.name": "Digital Bequest",
+	"app.slogan": "Don't leave your loved ones hanging.",
+	"app.logo.alt": "Digital Bequest Logo",
 
-  "encode.steps.1.title": "1. Your Message",
-  "encode.steps.1.subtitle": "Leave a Message for your loved ones",
-  "encode.steps.2.title": "2. Your Credentials (Encrypted)",
-  "encode.steps.2.subtitle": "Enter important credentials that your loved ones will need to access your devices and password managers.",
-  "encode.steps.3.title": "3. Your Password",
-  "encode.steps.3.subtitle": "Protect your credentials with a unique password. Give this password to your loved ones so only they can access your credentials in the event of your death.",
-  "encode.steps.3.fields.password.label": "Enter your Password",
-  "encode.steps.3.fields.password-repeat.label": "Repeat your Password",
-  "encode.steps.4.title": "4. Your PDF",
-  "encode.steps.4.buttons.download": "Download PDF",
+	"encode.steps.1.title": "1. Your Message",
+	"encode.steps.1.subtitle": "Leave a Message for your loved ones",
+	"encode.steps.2.title": "2. Your Credentials (Encrypted)",
+	"encode.steps.2.subtitle": "Enter important credentials that your loved ones will need to access your devices and password managers.",
+	"encode.steps.3.title": "3. Your Password",
+	"encode.steps.3.subtitle": "Protect your credentials with a unique password. Give this password to your loved ones so only they can access your credentials in the event of your death.",
+	"encode.steps.3.fields.password.label": "Enter your Password",
+	"encode.steps.3.fields.password-repeat.label": "Repeat your Password",
+	"encode.steps.4.title": "4. Your PDF",
+	"encode.steps.4.buttons.download": "Download PDF",
 
-  "decode.title": "Sorry for your loss.",
-  "decode.copy": "As you are here, it means you must have lost someone. But they left you something. Enter the password that they have given to you to retrieve it.",
-  "decode.fields.password.label": "Enter the Password they gave you",
-  "decode.message.title": "Here is what was left to you:",
+	"decode.title": "Sorry for your loss.",
+	"decode.copy": "As you are here, it means you must have lost someone. But they left you something. Enter the password that they have given to you to retrieve it.",
+	"decode.fields.password.label": "Enter the Password they gave you",
+	"decode.message.title": "Here is what was left to you:",
 
-  "page.qr-code.hint": "Scan the QR Code and unlock what they left you.",
-  "page.footer.message": "Created with DIGITAL BEQUEST. Visit {{url}} to generate your own digital bequest."
+	"page.qr-code.hint": "Scan the QR Code and unlock what they left you.",
+	"page.footer.message": "Created with DIGITAL BEQUEST. Visit {{url}} to generate your own digital bequest."
 }

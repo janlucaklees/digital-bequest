@@ -1,7 +1,8 @@
 @font-face {
 	font-family: 'Roboto';
-	src: url('./assets/font/Roboto-Regular.woff2') format('woff2'),
-		url('./assets/font/Roboto-Regular.woff') format('woff');
+	src:
+		url('../assets/font/Roboto-Regular.woff2') format('woff2'),
+		url('../assets/font/Roboto-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -9,8 +10,9 @@
 
 @font-face {
 	font-family: 'Roboto';
-	src: url('./assets/font/Roboto-Light.woff2') format('woff2'),
-		url('./assets/font/Roboto-Light.woff') format('woff');
+	src:
+		url('../assets/font/Roboto-Light.woff2') format('woff2'),
+		url('../assets/font/Roboto-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -18,8 +20,9 @@
 
 @font-face {
 	font-family: 'Roboto';
-	src: url('./assets/font/Roboto-Thin.woff2') format('woff2'),
-		url('./assets/font/Roboto-Thin.woff') format('woff');
+	src:
+		url('../assets/font/Roboto-Thin.woff2') format('woff2'),
+		url('../assets/font/Roboto-Thin.woff') format('woff');
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
