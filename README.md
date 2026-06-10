@@ -1,48 +1,70 @@
-# Svelte + Vite
+# Digital Bequest
 
-This template should help get you started developing with Svelte in Vite.
+<p align="center">
+<img src="src/assets/digital-bequest.svg" alt="Digital Bequest Logo" width="200">
+</p>
 
-## Recommended IDE Setup
+A privacy-first web app for leaving encrypted credentials to loved ones after death.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## About
 
-## Need an official Svelte framework?
+Digital Bequest helps you pass on important credentials - email passwords, bank logins, account
+details - to a trusted person without risking exposure while you're alive.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+You encrypt your credentials with a password, print the result as a PDF, and leave it somewhere safe
+(like an envelope with your will). The printed page contains a human-readable message and a QR code.
+When the time comes, the recipient scans the QR code, enters the password, and your credentials are
+revealed - no account, no app install, no cloud service required.
 
-## Technical considerations
+The security model is simple: **the printed paper alone is useless** without the password. Paper and
+password together grant full access.
 
-**Why use this over SvelteKit?**
+## How it Works
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+### 1. Encrypt your credentials
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+Enter a message (e.g. _"In the event of my death, scan this QR code"_), the credentials you want to
+pass on, and a password to encrypt them with.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+### 2. Print the PDF
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+Download and print the generated A4 page. It contains your plain-text message and a QR code
+embedding the encrypted credentials.
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+### 3. Leave it somewhere safe
 
-**Why include `.vscode/extensions.json`?**
+Store the printed page with your important documents. Share the password separately - verbally, in
+your will, or wherever makes sense for your situation.
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+When the recipient scans the QR code, they land on the same web app, enter the password, and your
+credentials are shown.
 
-**Why enable `checkJs` in the JS template?**
+## Self-Hosting
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+This app is hosted on GitHub Pages and I don't plan to take it down. But the QR codes you print
+point to _my_ deployment - if it ever goes away, so does the decode link.
 
-**Why is HMR not preserving my local component state?**
+If you want to be sure your loved ones can always access their credentials, fork this repo and
+deploy your own copy. GitHub Pages makes this free and straightforward:
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+1. Fork the repository on GitHub.
+2. In your fork's settings, enable GitHub Pages from the `master` branch `/docs` folder.
+3. Your app is now live at `https://<your-username>.github.io/<your-repo>/`.
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+Point your printed QR codes at your own deployment and you're no longer dependent on anyone.
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store';
-export default writable(0);
-```
+---
+
+## Donations
+
+The most valuable contribution to this project is your time and ideas. Open source becomes meaningful through people participating in it.
+
+If you would like to support the project financially, you can do so through the following options:
+
+- [PayPal](https://www.paypal.com/donate/?hosted_button_id=9ZYAV83CAZ5A4)
+
+Thank you for using, sharing, contributing and/or supporting the project in whatever way makes sense to you.
+
+---
+
+**Digital Bequest** is a fully client-side web app for encrypting personal credentials into a printable QR code, to be left for loved ones after death. All cryptography runs in the browser - nothing is ever sent to a server. The printed page plus a separately shared password is the only artifact needed to recover the credentials.
